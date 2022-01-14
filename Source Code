@@ -1,0 +1,168 @@
+local Exploit = Instance.new("ScreenGui")
+local Frame1 = Instance.new("Frame")
+local AntiAFK = Instance.new("TextButton")
+local TextLabel1 = Instance.new("TextLabel")
+local AutoMove1 = Instance.new("TextButton")
+local AutoMove3 = Instance.new("TextButton")
+local AutoMove2 = Instance.new("TextButton")
+local CloseButton = Instance.new("TextButton")
+local TextLabel2 = Instance.new("TextLabel")
+
+--Properties:
+
+Exploit.Name = "Exploit"
+Exploit.Parent = game.CoreGui
+Exploit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame1.Name = "Frame1"
+Frame1.Parent = Exploit
+Frame1.BackgroundColor3 = Color3.fromRGB(72, 0, 217)
+Frame1.BorderColor3 = Color3.fromRGB(165, 10, 10)
+Frame1.BorderSizePixel = 5
+Frame1.Position = UDim2.new(0.154275104, 0, 0.231499061, 0)
+Frame1.Size = UDim2.new(0, 371, 0, 282)
+Frame1.Active = true
+Frame1.Draggable = true
+
+AntiAFK.Name = "AntiAFK"
+AntiAFK.Parent = Frame1
+AntiAFK.BackgroundColor3 = Color3.fromRGB(62, 255, 91)
+AntiAFK.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AntiAFK.BorderSizePixel = 5
+AntiAFK.Position = UDim2.new(0.0539083555, 0, 0.148936167, 0)
+AntiAFK.Size = UDim2.new(0, 134, 0, 50)
+AntiAFK.Font = Enum.Font.SourceSans
+AntiAFK.Text = "AntiAFK"
+AntiAFK.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiAFK.TextSize = 30.000
+AntiAFK.MouseButton1Down:connect(function()
+	local vu = game:GetService("VirtualUser")
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	end)
+end)
+
+TextLabel1.Name = "TextLabel1"
+TextLabel1.Parent = Frame1
+TextLabel1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel1.BackgroundTransparency = 1.000
+TextLabel1.BorderSizePixel = 0
+TextLabel1.Position = UDim2.new(0, 0, 0.680851042, 0)
+TextLabel1.Size = UDim2.new(0, 371, 0, 50)
+TextLabel1.Font = Enum.Font.SourceSansBold
+TextLabel1.Text = "Elemental Grind Game Explosion Auto Farm"
+TextLabel1.TextColor3 = Color3.fromRGB(255, 0, 4)
+TextLabel1.TextSize = 23.000
+TextLabel1.TextStrokeColor3 = Color3.fromRGB(255, 0, 4)
+
+AutoMove1.Name = "AutoMove1"
+AutoMove1.Parent = Frame1
+AutoMove1.BackgroundColor3 = Color3.fromRGB(62, 255, 91)
+AutoMove1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoMove1.BorderSizePixel = 5
+AutoMove1.Position = UDim2.new(0.525606453, 0, 0.148936167, 0)
+AutoMove1.Size = UDim2.new(0, 134, 0, 50)
+AutoMove1.Font = Enum.Font.SourceSans
+AutoMove1.Text = "AutoMove1"
+AutoMove1.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoMove1.TextSize = 30.000
+AutoMove1.MouseButton1Down:connect(function()
+	while true do
+		local args = {
+			[1] = "Explosive Blast"
+		}
+
+		game:GetService("ReplicatedStorage"):FindFirstChild("292900105Client").StartMove:FireServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = "Explosive Blast"
+		}
+
+		game:GetService("ReplicatedStorage"):FindFirstChild("292900105Client").EndMove:FireServer(unpack(args))
+		wait(2)
+	end
+end)
+
+AutoMove3.Name = "AutoMove3"
+AutoMove3.Parent = Frame1
+AutoMove3.BackgroundColor3 = Color3.fromRGB(62, 255, 91)
+AutoMove3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoMove3.BorderSizePixel = 5
+AutoMove3.Position = UDim2.new(0.525606453, 0, 0.446808517, 0)
+AutoMove3.Size = UDim2.new(0, 134, 0, 50)
+AutoMove3.Font = Enum.Font.SourceSans
+AutoMove3.Text = "AutoMove3"
+AutoMove3.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoMove3.TextSize = 30.000
+AutoMove3.MouseButton1Down:connect(function()
+	while true do
+		local args = {
+			[1] = "Eruptive Dash"
+		}
+
+		game:GetService("ReplicatedStorage"):FindFirstChild("292900105Client").StartMove:FireServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = "Eruptive Dash"
+		}
+
+		game:GetService("ReplicatedStorage"):FindFirstChild("292900105Client").EndMove:FireServer(unpack(args))
+		wait(5)
+	end
+end)
+
+AutoMove2.Name = "AutoMove2"
+AutoMove2.Parent = Frame1
+AutoMove2.BackgroundColor3 = Color3.fromRGB(62, 255, 91)
+AutoMove2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoMove2.BorderSizePixel = 5
+AutoMove2.Position = UDim2.new(0.0539083481, 0, 0.446808517, 0)
+AutoMove2.Size = UDim2.new(0, 134, 0, 50)
+AutoMove2.Font = Enum.Font.SourceSans
+AutoMove2.Text = "AutoMove2"
+AutoMove2.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoMove2.TextSize = 30.000
+AutoMove2.MouseButton1Down:connect(function()
+	while true do
+		local args = {
+			[1] = "Incendiary Burst"
+		}
+
+		game:GetService("ReplicatedStorage"):FindFirstChild("292900105Client").StartMove:FireServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = "Incendiary Burst"
+		}
+
+		game:GetService("ReplicatedStorage"):FindFirstChild("292900105Client").EndMove:FireServer(unpack(args))
+		wait(4)
+	end
+end)
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = Frame1
+CloseButton.BackgroundColor3 = Color3.fromRGB(165, 0, 0)
+CloseButton.BorderColor3 = Color3.fromRGB(165, 10, 10)
+CloseButton.Size = UDim2.new(0, 20, 0, 22)
+CloseButton.Font = Enum.Font.SourceSans
+CloseButton.Text = "X"
+CloseButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+CloseButton.TextSize = 20.000
+CloseButton.MouseButton1Down:connect(function()
+	game.CoreGui.Exploit.Visible = false
+end)
+
+TextLabel2.Name = "TextLabel2"
+TextLabel2.Parent = Frame1
+TextLabel2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel2.BackgroundTransparency = 1.000
+TextLabel2.BorderSizePixel = 0
+TextLabel2.Position = UDim2.new(0, 0, 0.822695017, 0)
+TextLabel2.Size = UDim2.new(0, 371, 0, 50)
+TextLabel2.Font = Enum.Font.SourceSansBold
+TextLabel2.Text = "WARNING: AUTO MOVES WILL NOT STOP UNTIL YOU RESTART YOU'RE GAME"
+TextLabel2.TextColor3 = Color3.fromRGB(255, 0, 4)
+TextLabel2.TextSize = 13.000
+TextLabel2.TextStrokeColor3 = Color3.fromRGB(255, 0, 4)
